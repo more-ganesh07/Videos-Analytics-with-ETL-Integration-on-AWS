@@ -18,23 +18,23 @@ This initiative seeks to implement a secure and efficient system for the organiz
 
 ## Services we will be using
 
-### 1) Amazon S3:
+#### 1) Amazon S3:
 Function: Object storage service.
 Features: Manufacturing scalability, data availability, security, and performance.
 
-### 2) AWS IAM:
+#### 2) AWS IAM:
 Manage access to AWS services and resources securely.
 
-### 3) Amazon QuickSight:
+#### 3) Amazon QuickSight:
 Facilitates cloud-based business intelligence with scalable and machine learning capabilities.
 
-### 4) AWS Glue:
+#### 4) AWS Glue:
 Simplifies data discovery, preparation, and combination for analytics, machine learning, and application development.
 
-### 5) AWS Lambda:
+#### 5) AWS Lambda:
 Enables running code without the need for server creation or management.
 
-### 6) Amazon Athena:
+#### 6) Amazon Athena:
 Allows querying data directly in S3 without the necessity of loading it, making it a serverless and efficient solution.
 
 

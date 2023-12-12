@@ -40,7 +40,6 @@ Allows querying data directly in S3 without the necessity of loading it, making 
 
 ## Dataset Used
 The Kaggle dataset comprises daily statistics in CSV files documenting popular YouTube videos across several months. Each day witnesses the publication of up to 200 trending videos across various locations, with each region having its dedicated file. The dataset encompasses details such as video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count. Additionally, a category_id field, varying by region, is present in the linked JSON file corresponding to each area. This dataset thus offers comprehensive insights into the dynamics and attributes of trending YouTube videos across diverse regions over an extended timeframe.
-
 #### https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 

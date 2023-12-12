@@ -5,7 +5,7 @@ This repository focuses on securely managing, streamlining, and analyzing struct
 
 ### Project Goals:
  1) Data Ingestion: Develop a mechanism for ingesting data from diverse sources
- 2) 2) ETL System: Transform raw data into the appropriate format.
+ 2) ETL System: Transform raw data into the appropriate format.
  3) Data Lake: Establish a centralized repository for storing data from multiple sources.
  4) Scalability: Ensure the system scales seamlessly with increasing data size.
  5) Cloud Integration (AWS): Utilize AWS for processing large amounts of data.
@@ -16,7 +16,7 @@ This repository focuses on securely managing, streamlining, and analyzing struct
 1) Amazon S3: Object storage service offering manufacturing scalability, data availability, security, and performance.
 2) AWS IAM: Identity and access management for secure access to AWS services and resources.
 3) QuickSight: Scalable, serverless, embeddable, machine learning-powered BI service for cloud-based business intelligence.
-4) AWS Glue: Serverless data integration service facilitating data discovery, preparation, and combination for analytics, machine learning, and application development.
+4) AWS Glue: Serverless data integration service facilitating data discovery, preparation, and combination for analytics and application development.
 5) AWS Lambda: Computing service enabling code execution without server management.
 6) AWS Athena: Interactive query service for S3, allowing data querying without the need to load it.
 

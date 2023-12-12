@@ -1,47 +1,38 @@
-# Data-Engineering-YouTube-Data-Analysis-with-AWS
+import awswrangler as wr
+import pandas as pd
+import urllib.parse
+import os
 
-## Overview
-This initiative seeks to implement a secure and efficient system for the organized handling, streamlining, and analysis of structured and semi-structured data from YouTube videos. The focus is on categorizing videos and analyzing trending metrics in a secure manner.
-
-## Project Goals
- 1) Data Ingestion Mechanism: Develop a robust mechanism for ingesting data from diverse sources.
-
- 2) ETL System Implementation: Transform raw data into the appropriate format to facilitate effective analysis.
-
- 3) Data Lake Repository: Establish a centralized repository in the form of a data lake to store information obtained from multiple sources.
-
- 4) Scalability Assurance: Ensure the scalability of the system to accommodate growing data volumes seamlessly.
-
- 5) Cloud Integration (AWS): Leverage cloud computing, specifically AWS, for processing vast amounts of data, as local computers may be insufficient for such tasks.
-
- 6) Reporting Dashboard: Construct a comprehensive dashboard to obtain insights and answers to the questions posed during analysis.
-
-## Services we will be using
-
-#### 1) Amazon S3:
-Function: Object storage service.
-Features: Manufacturing scalability, data availability, security, and performance.
-
-#### 2) AWS IAM:
-Manage access to AWS services and resources securely.
-
-#### 3) Amazon QuickSight:
-Facilitates cloud-based business intelligence with scalable and machine learning capabilities.
-
-#### 4) AWS Glue:
-Simplifies data discovery, preparation, and combination for analytics, machine learning, and application development.
-
-#### 5) AWS Lambda:
-Enables running code without the need for server creation or management.
-
-#### 6) Amazon Athena:
-Allows querying data directly in S3 without the necessity of loading it, making it a serverless and efficient solution.
+os_input_s3_cleansed_layer = os.environ['s3_cleansed_layer']
+os_input_glue_catalog_db_name = os.environ['glue_catalog_db_name']
+os_input_glue_catalog_table_name = os.environ['glue_catalog_table_name']
+os_input_write_data_operation = os.environ['write_data_operation']
 
 
-## Dataset Used
-The Kaggle dataset comprises daily statistics in CSV files documenting popular YouTube videos across several months. Each day witnesses the publication of up to 200 trending videos across various locations, with each region having its dedicated file. The dataset encompasses details such as video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count. Additionally, a category_id field, varying by region, is present in the linked JSON file corresponding to each area. This dataset thus offers comprehensive insights into the dynamics and attributes of trending YouTube videos across diverse regions over an extended timeframe.
-#### https://www.kaggle.com/datasets/datasnaek/youtube-new
+def lambda_handler(event, context):
+    # Get the object from the event and show its content type
+    bucket = event['Records'][0]['s3']['bucket']['name']
+    key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
+    try:
 
+        # Creating DF from content
+        df_raw = wr.s3.read_json('s3://{}/{}'.format(bucket, key))
 
+        # Extract required columns:
+        df_step_1 = pd.json_normalize(df_raw['items'])
 
+        # Write to S3
+        wr_response = wr.s3.to_parquet(
+            df=df_step_1,
+            path=os_input_s3_cleansed_layer,
+            dataset=True,
+            database=os_input_glue_catalog_db_name,
+            table=os_input_glue_catalog_table_name,
+            mode=os_input_write_data_operation
+        )
 
+        return wr_response
+    except Exception as e:
+        print(e)
+        print('Error getting object {} from bucket {}. Make sure they exist and your bucket is in the same region as this function.'.format(key, bucket))
+        raise e

@@ -23,24 +23,19 @@ Function: Object storage service.
 Features: Manufacturing scalability, data availability, security, and performance.
 
 ### 2) AWS IAM:
-Function: Identity and access management.
-Purpose: Manage access to AWS services and resources securely.
+Manage access to AWS services and resources securely.
 
 ### 3) Amazon QuickSight:
-Nature: Scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service.
-Use: Facilitates cloud-based business intelligence with scalable and machine learning capabilities.
+Facilitates cloud-based business intelligence with scalable and machine learning capabilities.
 
 ### 4) AWS Glue:
-Type: Serverless data integration service.
-Role: Simplifies data discovery, preparation, and combination for analytics, machine learning, and application development.
+Simplifies data discovery, preparation, and combination for analytics, machine learning, and application development.
 
 ### 5) AWS Lambda:
-Nature: Computing service.
-Function: Enables running code without the need for server creation or management.
+Enables running code without the need for server creation or management.
 
 ### 6) Amazon Athena:
-Type: Interactive query service for S3.
-Feature: Allows querying data directly in S3 without the necessity of loading it, making it a serverless and efficient solution.
+Allows querying data directly in S3 without the necessity of loading it, making it a serverless and efficient solution.
 
 
 

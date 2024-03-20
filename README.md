@@ -30,5 +30,6 @@ To experience improved visuals and faster loading times, please click the follow
 https://drive.google.com/drive/folders/1q-1zNENstn8pjONrLIjXF7xAuotsgE8X?usp=drive_link
 
 
+[Visual Product Recognisation.pdf](https://github.com/more-ganesh07/Data_Engineering_YouTube_Data_Analysis_with_AWS/files/14664485/Visual.Product.Recognisation.pdf)
 
 

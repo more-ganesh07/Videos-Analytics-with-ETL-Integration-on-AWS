@@ -23,9 +23,7 @@ This repository focuses on securely managing, streamlining, and analyzing struct
 ### Dataset:
 The repository includes a Kaggle dataset containing daily statistics (CSV files) of up to 200 trending YouTube videos across multiple months and locations. Each region has its file, including video title, channel title, publication time, tags, views, likes, dislikes, description, and comment count. The associated JSON file contains a region-specific category_id field. This dataset serves as a comprehensive source for understanding the dynamics of trending YouTube videos. 
 
-https://www.kaggle.com/datasets/datasnaek/youtube-new
-
-https://github.com/more-ganesh07/Data_Engineering_YouTube_Data_Analysis_with_AWS/assets/108267458/29c011a0-a587-4ef0-9013-60f3caec899c
+https://github.com/more-ganesh07/Data_Engineering_YouTube_Data_Analysis_with_AWS/assets/108267458/eb565c2f-070b-4f0f-b36b-fae76afb43f5
 
 
 

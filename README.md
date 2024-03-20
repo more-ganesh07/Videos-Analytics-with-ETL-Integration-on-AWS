@@ -26,4 +26,9 @@ The repository includes a Kaggle dataset containing daily statistics (CSV files)
 https://github.com/more-ganesh07/Data_Engineering_YouTube_Data_Analysis_with_AWS/assets/108267458/eb565c2f-070b-4f0f-b36b-fae76afb43f5
 
 
+To experience improved visuals and faster loading times, please click the following link to watch the project video.
+https://drive.google.com/drive/folders/1q-1zNENstn8pjONrLIjXF7xAuotsgE8X?usp=drive_link
+
+
+
 
